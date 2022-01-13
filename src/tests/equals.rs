@@ -25,3 +25,14 @@ pub mod equals {
 		}
   }
 }
+
+#[cfg(test)]
+pub mod test1 {
+  #[test]
+  pub fn check_equals_array() {
+    let a = vec![1, 2, 3];
+    let b = vec![1, 2, 3];
+    assert_eq!(true, crate::equals::equals::equals_array(a, b));
+  }
+}
+
