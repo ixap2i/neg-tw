@@ -7,4 +7,3 @@ edition = "2018"
 [dependencies]
 yew = "0.19"
 chrono = "0.4"
-trunk = "0.14.0"

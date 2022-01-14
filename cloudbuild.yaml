@@ -2,3 +2,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/hc-app-image', '-f', 'Dockerfile', '.' ]
 images: ['gcr.io/$PROJECT_ID/hc-app-image']
+timeout: 3600s
