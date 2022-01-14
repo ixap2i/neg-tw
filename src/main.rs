@@ -1,10 +1,12 @@
 use yew::prelude::*;
 use std::fmt;
+use chrono::{ Local, DateTime };
 
 struct Draft {
   id: String,
   title: String,
   body: String,
+  // created_at: String,
   published: bool
 }
 
@@ -14,6 +16,7 @@ impl Draft {
       id: "id".to_string(),
       title: "title".to_string(),
       body: "body".to_string(),
+      // created_at: Local::now().format("%Y年%m月%d日 %H時%M分%S秒 %Z").to_string(),
       published: false
     }
   }
@@ -31,16 +34,18 @@ fn app() -> Html {
       id: "1".to_string(),
       title: "title!".to_string(),
       body: "body!".to_string(),
+      // created_at: Local::now().format("%Y年%m月%d日 %H時%M分%S秒 %Z").to_string(),
       published: false
     }
   ];
   let drafts = dd.iter().map(|dobj| html! {
     <p>{format!("{}: {}", dobj.title, dobj.body)}</p>
   }).collect::<Html>();
+
   html! {
     <div>
       <h1>{ "Hello World" }</h1>
-      <div>{ drafts }</div>
+      <article>{ drafts }</article>
     </div>
   }
 }
