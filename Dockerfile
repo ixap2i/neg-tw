@@ -1,6 +1,6 @@
 FROM rust:1.24.0 as builder
 
-FROM debian:buster-slim
+FROM debian:buster
 
 RUN apt-get update && apt-get install -y curl cargo
 
@@ -13,4 +13,5 @@ ENV PATH="/root/.cargo/bin:$PATH"
 RUN rustup target add wasm32-unknown-unknown
 RUN cargo install trunk
 RUN cargo build
-RUN trunk serve
+CMD trunk serve
+EXPOSE 8080
