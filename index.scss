@@ -1,0 +1,18 @@
+body {
+  color: rgb(75, 62, 43);
+  font-family: Futura, Yu-Gothic, sans-serif;
+}
+
+a { color: rgb(116, 96, 67);}
+a:hover { color: rgb(85, 71, 50);}
+
+.article-box {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(152, 129, 92);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  h2 { font-size: 16px; }
+  a.sec { text-indent: 1rem; }
+}
