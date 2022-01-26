@@ -1,0 +1,27 @@
+body {
+  color: #4b3e2b;
+  font-family: Futura, Yu-Gothic, sans-serif;
+}
+
+a {
+  color: #746043;
+}
+
+a:hover {
+  color: #554732;
+}
+
+.article-box {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #98815c;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+.article-box h2 {
+  font-size: 16px;
+}
+.article-box a.sec {
+  text-indent: 1rem;
+}
