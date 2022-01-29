@@ -4,12 +4,29 @@
  *-------------------------------------------------------------------------------------------------------------*/
 
 struct Draft {
-   id: String,
+   id: i8,
    title: String,
    body: String,
+   link: String,
    published: bool
 }
 
 fn main() {
-    println!("{}", "hello_cargo!".to_string())
+    let mut draft_obj = vec![
+        Draft {
+            id: 1i8,
+            title: "this is title".to_string(),
+            body: "this is body".to_string(),
+            link: "https:///".to_string(),
+            published: false
+        },
+        Draft {
+            id: 2i8,
+            title: "this is title".to_string(),
+            body: "this is body".to_string(),
+            link: "https:///".to_string(),
+            published: false
+        }
+    ];
+    draft_obj.iter().for_each(|draft: &Draft| println!("{:?}: {:?}", draft.id, draft.title));
 }
