@@ -1,5 +1,5 @@
 [package]
-name = "neg-tw"
+name = "neg_tw"
 version = "0.1.0"
 authors = ["VS Code <vscode@microsoft.com>"]
 
@@ -8,5 +8,5 @@ yew = "0.19"
 diesel = { version = "1.4.8", features = ["postgres"]}
 
 [[bin]]
-name = "neg-tw"
+name = "neg_tw"
 path = "app/src/main.rs"
