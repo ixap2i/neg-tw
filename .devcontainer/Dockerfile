@@ -7,5 +7,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:1-${VARIANT}
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 RUN apt-get update && apt-get -y install postgresql-client
 RUN cargo install trunk
+RUN cargo install wasm-bindgen-cli
 RUN rustup target add wasm32-unknown-unknown
 RUN cargo install diesel_cli
+
+EXPOSE 8080
