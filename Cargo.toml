@@ -2,10 +2,18 @@
 name = "neg_tw"
 version = "0.1.0"
 authors = ["VS Code <vscode@microsoft.com>"]
+edition = "2021"
 
 [dependencies]
 yew = "0.19"
+wasm-bindgen = "0.2"
 diesel = { version = "1.4.8", features = ["postgres"]}
+
+# TODO: research lib mean
+# [lib]
+# # You should include "rlib" (the default crate type) otherwise your crate can't be used as a Rust library
+# # which, among other things, breaks unit testing
+# crate-type = ["rlib", "cdylib"]
 
 [[bin]]
 name = "neg_tw"
