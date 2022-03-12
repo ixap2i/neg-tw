@@ -15,7 +15,7 @@ impl fmt::Display for Dog {
         write!(f, "json response has error")
     }
 }
-// TODO: かきこむ
+
 impl error::Error for Dog {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
         None
@@ -27,9 +27,9 @@ pub mod my_crate {
 }
 
 // TODO: type assertion println!("dog image url: {:#?}", type_of(&resp));
-fn type_of<T>(_: T) -> &'static str {
-    type_name::<T>()
-}
+// fn type_of<T>(_: T) -> &'static str {
+//     type_name::<T>()
+// }
 
 #[tokio::test]
 async fn error_handling() -> Result<(), Box<dyn std::error::Error>> {
@@ -43,8 +43,7 @@ async fn error_handling() -> Result<(), Box<dyn std::error::Error>> {
     } else if &resp.status == "error" {
         println!("json request occurred: {:#?}", &resp.message);
     } else {
-        panic!("unexpected something error occurred : {:#?}",
-               &resp);
+        panic!("unexpected something error occurred : {:#?}", &resp);
     }
     Ok(())
 }

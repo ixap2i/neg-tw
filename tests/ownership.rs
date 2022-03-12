@@ -1,6 +1,6 @@
 #[test]
 fn borrow_variable() {
-    let mut test = "test";
+    let test = "test";
 
     // testを共有参照している(参照の代入)
     let t = &test;
