@@ -10,5 +10,6 @@ RUN cargo install trunk
 RUN cargo install wasm-bindgen-cli
 RUN rustup target add wasm32-unknown-unknown
 RUN cargo install diesel_cli
+# RUN trunk serve
 
 EXPOSE 8080
