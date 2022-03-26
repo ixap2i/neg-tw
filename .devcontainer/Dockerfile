@@ -10,6 +10,7 @@ RUN cargo install wasm-bindgen-cli
 RUN rustup target add wasm32-unknown-unknown
 RUN cargo install diesel_cli
 RUN curl -L git.io/nodebrew | perl - setup
+RUN npm i --save
 # CMD export PATH=$HOME/.nodebrew/current/bin:$PATH
 # RUN nodebrew install v16.14.2
 EXPOSE 3000 8080
